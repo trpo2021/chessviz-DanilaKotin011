@@ -1,1 +1,5 @@
-main
+#Ignore chessboard file
+chessboard
+
+#Ignore .exe files
+*.exe
