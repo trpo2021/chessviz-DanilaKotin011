@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
-#include <conio.h>
 
 
-char board[8][8]
+char board[9][9]
 ={
     "rnbqkbnr",
     "pppppppp",
@@ -30,8 +29,8 @@ void printboard()
     printf("  -----------------  \n   a b c d e f g h");
 }
 
-main()
+int main()
 {
     printboard();
-    getch();
+    return 0;
 }
