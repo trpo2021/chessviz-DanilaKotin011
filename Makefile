@@ -1,3 +1,3 @@
-chess:	 chess.cpp
-	g++ -o main -Wall -Werror chess.cpp
-	./main
+chessviz: chess.cpp
+	g++ -o chessboard -Wall -Werror chess.cpp
+	./chessboard
