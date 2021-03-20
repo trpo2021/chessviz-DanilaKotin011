@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <libchessviz/print.h>
+#include "print.h"
 char move(char chessboard[11][11])
 {
     char sstrok1, sstrok2, temp;
@@ -46,12 +46,40 @@ char move(char chessboard[11][11])
     else
         flag = 1;
 
-    if (stab1 >= 1 && stab1 <= 8)
+    if (stab1 == 1)
+        trash = flag;
+    else if (stab1 == 2)
+        trash = flag;
+    else if (stab1 == 3)
+        trash = flag;
+    else if (stab1 == 4)
+        trash = flag;
+    else if (stab1 == 5)
+        trash = flag;
+    else if (stab1 == 6)
+        trash = flag;
+    else if (stab1 == 7)
+        trash = flag;
+    else if (stab1 == 8)
         trash = flag;
     else
         flag = 1;
 
-    if (stab2 >= 1 && stab2 <= 8)
+    if (stab2 == 1)
+        trash = flag;
+    else if (stab2 == 2)
+        trash = flag;
+    else if (stab2 == 3)
+        trash = flag;
+    else if (stab2 == 4)
+        trash = flag;
+    else if (stab2 == 5)
+        trash = flag;
+    else if (stab2 == 6)
+        trash = flag;
+    else if (stab2 == 7)
+        trash = flag;
+    else if (stab2 == 8)
         trash = flag;
     else
         flag = 1;
