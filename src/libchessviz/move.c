@@ -1,90 +1,32 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "print.h"
+#include <libchessviz/print.h>
+#include <libchessviz/checktab.h>
+#include <libchessviz/checkstrok.h>
 char move(char chessboard[11][11])
 {
     char sstrok1, sstrok2, temp;
-    int stab1, stab2, rstrok1, rstrok2, flag, trash;
+    int stab1, stab2, rstrok1, rstrok2, flag1, flag2, flag3;
 
     scanf("%c%d-%c%d", &sstrok1, &stab1, &sstrok2, &stab2);
-    flag = 0;
-    if (sstrok1 == 'a')
-        rstrok1 = 1;
-    else if (sstrok1 == 'b')
-        rstrok1 = 2;
-    else if (sstrok1 == 'c')
-        rstrok1 = 3;
-    else if (sstrok1 == 'd')
-        rstrok1 = 4;
-    else if (sstrok1 == 'e')
-        rstrok1 = 5;
-    else if (sstrok1 == 'f')
-        rstrok1 = 6;
-    else if (sstrok1 == 'g')
-        rstrok1 = 7;
-    else if (sstrok1 == 'h')
-        rstrok1 = 8;
-    else
-        flag = 1;
+    flag1 = 0;
+    flag2 = 0;
+    flag3 = 0;
 
-    if (sstrok2 == 'a')
-        rstrok2 = 1;
-    else if (sstrok2 == 'b')
-        rstrok2 = 2;
-    else if (sstrok2 == 'c')
-        rstrok2 = 3;
-    else if (sstrok2 == 'd')
-        rstrok2 = 4;
-    else if (sstrok2 == 'e')
-        rstrok2 = 5;
-    else if (sstrok2 == 'f')
-        rstrok2 = 6;
-    else if (sstrok2 == 'g')
-        rstrok2 = 7;
-    else if (sstrok2 == 'h')
-        rstrok2 = 8;
-    else
-        flag = 1;
+    rstrok1 = checkstrok(sstrok1);
+    if (rstrok1 == -1)
+        flag1 = 1;
 
-    if (stab1 == 1)
-        trash = flag;
-    else if (stab1 == 2)
-        trash = flag;
-    else if (stab1 == 3)
-        trash = flag;
-    else if (stab1 == 4)
-        trash = flag;
-    else if (stab1 == 5)
-        trash = flag;
-    else if (stab1 == 6)
-        trash = flag;
-    else if (stab1 == 7)
-        trash = flag;
-    else if (stab1 == 8)
-        trash = flag;
-    else
-        flag = 1;
+    rstrok2 = checkstrok(sstrok2);
+    if (rstrok2 == -1)
+        flag1 = 1;
 
-    if (stab2 == 1)
-        trash = flag;
-    else if (stab2 == 2)
-        trash = flag;
-    else if (stab2 == 3)
-        trash = flag;
-    else if (stab2 == 4)
-        trash = flag;
-    else if (stab2 == 5)
-        trash = flag;
-    else if (stab2 == 6)
-        trash = flag;
-    else if (stab2 == 7)
-        trash = flag;
-    else if (stab2 == 8)
-        trash = flag;
-    else
-        flag = 1;
+    flag2
+        = checktab(stab1);
 
-    if (flag == 0) {
+    flag3 = checktab(stab2);
+
+    if (flag1 == 0 && flag2 == 0 && flag3 == 0) {
         temp = chessboard[stab1 - 1][rstrok1];
         chessboard[stab1 - 1][rstrok1] = ' ';
         chessboard[stab2 - 1][rstrok2] = temp;
