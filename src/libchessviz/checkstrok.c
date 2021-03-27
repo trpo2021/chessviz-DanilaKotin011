@@ -1,3 +1,5 @@
+#include <libchessviz/checkstrok.h>
+
 int checkstrok(char stroka)
 {
     if (stroka == 'a')

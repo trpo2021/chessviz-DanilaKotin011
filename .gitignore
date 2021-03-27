@@ -1,5 +1,5 @@
 #Ignore main file
-
+bin/
 
 #Ignore .<name> files
 *.o
