@@ -1,6 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <libchessviz/print.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void print(char chessboard[11][11])
 {
