@@ -1,14 +1,15 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include <libchessviz/checkstrok.h>
+#include <libchessviz/checktab.h>
 #include <libchessviz/move.h>
 #include <libchessviz/print.h>
-#include <libchessviz/checktab.h>
-#include <libchessviz/checkstrok.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 char move(char chessboard[11][11])
 {
     char start_strok_1, start_strok_2, temp;
-    int tab_1, tab_2, real_strok_1, real_strok_2, check_strok, check_tab_1, check_tab_2;
+    int tab_1, tab_2, real_strok_1, real_strok_2, check_strok, check_tab_1,
+            check_tab_2;
 
     scanf("%c%d-%c%d", &start_strok_1, &tab_1, &start_strok_2, &tab_2);
     check_strok = 0;
@@ -23,8 +24,7 @@ char move(char chessboard[11][11])
     if (real_strok_2 == -1)
         check_strok = 1;
 
-    check_tab_1
-        = checktab(tab_1);
+    check_tab_1 = checktab(tab_1);
 
     check_tab_2 = checktab(tab_2);
 
