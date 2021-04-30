@@ -1,8 +1,8 @@
-#include <libchessviz/print.h>
+#include <libchessviz/printboard.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-void print(char chessboard[11][11])
+void printboard(char chessboard[][10])
 {
     int i, z;
     for (i = 0; i < 8; i++) {
@@ -10,10 +10,10 @@ void print(char chessboard[11][11])
             if (z == 0)
                 printf("%c|", chessboard[i][z]);
             else
-                printf("%c ", chessboard[i][z]);
+                printf("%c", chessboard[i][z]);
         }
         printf("\n");
     }
-    printf("  _______________  \n  a b c d e f g h");
+    printf("  __________ \n abcdefgh");
     printf("\n");
 }
