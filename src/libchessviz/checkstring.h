@@ -1,2 +1,2 @@
 #pragma once
-int checkstring(char string);
+int checkstring(char string[]);

@@ -16,8 +16,8 @@ int checkcommand(
     realstartcolumn = checkcolumn(startcolumn);
     realendcolumn = checkcolumn(endcolumn);
 
-    realstartstring = checkstring(startstring);
-    realendstring = checkstring(endstring);
+    realstartstring = checkstring(&startstring);
+    realendstring = checkstring(&endstring);
 
     if (realstartcolumn != -1 && realendcolumn != -1 && realstartstring != -1
         && realendstring != -1) {
